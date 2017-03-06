@@ -1,14 +1,8 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from "react";
+import ReactDOM from "react-dom";
+import Greeting from "./download_group";
 
-var Hello = React.createClass ({
-    render: function() {
-        return (
-            <h1>
-            Webpack + React + Django works!
-            </h1>
-        )
-    }
-})
-
-ReactDOM.render(<Hello />, document.getElementById('container'))
+ReactDOM.render(
+    <Greeting name="s"/>,
+    document.getElementById('container')
+);
