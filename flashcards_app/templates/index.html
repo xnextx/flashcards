@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Easy FlashCards</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/static/bower_components/materialize/dist/css/materialize.min.css"
+          media="screen,projection"/>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+
+{% block card %}{% endblock %}
+<div id="container"></div>
+{#<script src="/static/js/build/build.js"></script>#}
+<script src="http://localhost:8080/static/js/build/build.js"></script>
+
+<!--Import jQuery before materialize.js-->
+<script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/static/bower_components/materialize/dist/js/materialize.min.js"></script>
+</body>
+</html>

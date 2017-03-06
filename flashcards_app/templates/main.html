@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block card %}
+    <div class="container">
+        <div class="row animated" id="card">
+            <div class="col offset-m2 m8 offset-m2 s12">
+                <div class="card white">
+                    <div class="card-content black-text center-align" onclick="switch_card()">
+                        <span class="card-title" id="first">-</span>
+                        <span class="card-title" id="second">-</span>
+                    </div>
+                    <div class="card-action">
+                        <div class="right">
+                            <a href="#" onclick="iknow_click()" class="btn-floating"><i
+                                    class="material-icons">thumb_up</i>
+                                I know </a>
+                            <a href="#" onclick="idontknow_click()" class="btn-floating red "><i class="material-icons">thumb_down</i>Don't
+                                know</a>
+                        </div>
+                        <a class="waves-effect waves-light btn" onclick="speech()"><i class="material-icons left">speaker_notes</i>Speech</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row center-align">
+            <div class="col offset-s2 s8 offset-s2" id="counter">
+                -
+            </div>
+        </div>
+    </div>
+    <script>
+        var idontknow_global = {{ questions_all | safe}};
+
+
+    </script>
+
+    <script src="/static/scripts/show_flashcard.js"></script>
+{% endblock %}
